@@ -35,7 +35,7 @@ app.route("/")
     let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=7107e7558205415e96b61e9e839410d5&category=${content}`;
    axios.get(url).then((result) => {
       const articles=  result.data.articles;
-      res.render("index",{articles:articles});
+      res.render("news",{articles:articles});
 
     }).catch((err) => {
         console.log(err);
